@@ -1,0 +1,28 @@
+repository:
+
+# Labels: define labels for Issues and Pull Requests
+labels:
+  - name: feature
+    color: FEF903
+  - name: improve
+    color: 5BFFFF
+  - name: refactor
+    color: FF009F
+  - name: chore
+    color: 1F1F1F
+  - name: build
+    color: FFFFFF
+  - name: bug
+    color: FF0000
+  - name: performance
+    color: 80FF00
+  - name: test
+    color: 08FECA
+  - name: documentation
+    color: 004AFF
+  - name: accessibility
+    color: CE00FF
+  - name: style
+    color: FD5B03
+  - name: wontfix
+    color: 747474
