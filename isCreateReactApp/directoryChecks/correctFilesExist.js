@@ -14,6 +14,12 @@ const checkExistenceOf = {
     }
     return this;
   },
+  theIndexHtml() {
+    if (!fs.existsSync('./public/index.html')) {
+      this.missingFiles.push('public/index.html');
+    }
+    return this;
+  },
   theSrcDirectory() {
     if (!fs.existsSync('./src')) {
       this.missingFiles.push('src');
