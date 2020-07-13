@@ -20,6 +20,12 @@ const checkExistenceOf = {
     }
     return this;
   },
+  theLogo192() {
+    if (!fs.existsSync('./public/logo192.png')) {
+      this.missingFiles.push('public/logo192.png');
+    }
+    return this;
+  },
   theSrcDirectory() {
     if (!fs.existsSync('./src')) {
       this.missingFiles.push('src');
