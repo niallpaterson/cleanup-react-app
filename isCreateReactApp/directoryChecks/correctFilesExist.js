@@ -50,6 +50,12 @@ const checkExistenceOf = {
     }
     return this;
   },
+  setupTests() {
+    if (!fs.existsSync('./src/setupTests.js')) {
+      this.missingFiles.push('src/setupTests.js');
+    }
+    return this;
+  },
   theGitignore() {
     if (!fs.existsSync('./.gitignore')) {
       this.missingFiles.push('.gitignore');
