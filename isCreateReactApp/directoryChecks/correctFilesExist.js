@@ -32,6 +32,12 @@ const checkExistenceOf = {
     }
     return this;
   },
+  theManifestJson() {
+    if (!fs.existsSync('./public/manifest.json')) {
+      this.missingFiles.push('public/manifest.json');
+    }
+    return this;
+  },
   theSrcDirectory() {
     if (!fs.existsSync('./src')) {
       this.missingFiles.push('src');
