@@ -8,6 +8,12 @@ const checkExistenceOf = {
     }
     return this;
   },
+  theAppCss() {
+    if (!fs.existsSync('./src/App.css')) {
+      this.missingFiles.push('src/App.css');
+    }
+    return this;
+  },
   theGitignore() {
     if (!fs.existsSync('./.gitignore')) {
       this.missingFiles.push('.gitignore');
