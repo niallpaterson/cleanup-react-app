@@ -20,6 +20,12 @@ const checkExistenceOf = {
     }
     return this;
   },
+  theAppTestJs() {
+    if (!fs.existsSync('./src/App.test.js')) {
+      this.missingFiles.push('src/App.test.js');
+    }
+    return this;
+  },
   theGitignore() {
     if (!fs.existsSync('./.gitignore')) {
       this.missingFiles.push('.gitignore');
