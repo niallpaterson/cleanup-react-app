@@ -2,6 +2,12 @@ import fs from 'fs';
 
 const checkExistenceOf = {
   missingFiles: [],
+  theSrcDirectory() {
+    if (!fs.existsSync('./src')) {
+      this.missingFiles.push('src');
+    }
+    return this;
+  },
   theGitignore() {
     if (!fs.existsSync('./.gitignore')) {
       this.missingFiles.push('.gitignore');
