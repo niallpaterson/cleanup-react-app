@@ -32,6 +32,12 @@ const checkExistenceOf = {
     }
     return this;
   },
+  theindexJs() {
+    if (!fs.existsSync('./src/index.js')) {
+      this.missingFiles.push('src/index.js');
+    }
+    return this;
+  },
   theGitignore() {
     if (!fs.existsSync('./.gitignore')) {
       this.missingFiles.push('.gitignore');
