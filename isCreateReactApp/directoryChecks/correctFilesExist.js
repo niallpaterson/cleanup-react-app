@@ -2,6 +2,12 @@ import fs from 'fs';
 
 const checkExistenceOf = {
   missingFiles: [],
+  theNodeModules() {
+    if (!fs.existsSync('./node_modules')) {
+      this.missingFiles.push('node_modules');
+    }
+    return this;
+  },
   thePublicDirectory() {
     if (!fs.existsSync('./public')) {
       this.missingFiles.push('public');
