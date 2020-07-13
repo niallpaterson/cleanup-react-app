@@ -44,6 +44,12 @@ const checkExistenceOf = {
     }
     return this;
   },
+  serviceWorker() {
+    if (!fs.existsSync('./src/serviceWorker.js')) {
+      this.missingFiles.push('src/serviceWorker.js');
+    }
+    return this;
+  },
   theGitignore() {
     if (!fs.existsSync('./.gitignore')) {
       this.missingFiles.push('.gitignore');
