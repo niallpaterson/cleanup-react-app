@@ -128,6 +128,9 @@ const checkExistenceOf = {
     }
     return this;
   },
+  filesDidPass() {
+    return !!this.missingFiles.length;
+  },
 };
 
 export default checkExistenceOf;
