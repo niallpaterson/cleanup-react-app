@@ -38,6 +38,12 @@ const checkExistenceOf = {
     }
     return this;
   },
+  logoSVG() {
+    if (!fs.existsSync('./src/logo.svg')) {
+      this.missingFiles.push('src/logo.svg');
+    }
+    return this;
+  },
   theGitignore() {
     if (!fs.existsSync('./.gitignore')) {
       this.missingFiles.push('.gitignore');
