@@ -8,6 +8,12 @@ const checkExistenceOf = {
     }
     return this;
   },
+  theFavicon() {
+    if (!fs.existsSync('./public/favicon.ico')) {
+      this.missingFiles.push('public/favicon.ico');
+    }
+    return this;
+  },
   theSrcDirectory() {
     if (!fs.existsSync('./src')) {
       this.missingFiles.push('src');
