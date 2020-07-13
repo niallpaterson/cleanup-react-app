@@ -38,6 +38,12 @@ const checkExistenceOf = {
     }
     return this;
   },
+  theRobotsTxt() {
+    if (!fs.existsSync('./public/robots.txt')) {
+      this.missingFiles.push('public/robots.txt');
+    }
+    return this;
+  },
   theSrcDirectory() {
     if (!fs.existsSync('./src')) {
       this.missingFiles.push('src');
