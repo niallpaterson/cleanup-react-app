@@ -26,6 +26,12 @@ const checkExistenceOf = {
     }
     return this;
   },
+  theindexCss() {
+    if (!fs.existsSync('./src/index.css')) {
+      this.missingFiles.push('src/index.css');
+    }
+    return this;
+  },
   theGitignore() {
     if (!fs.existsSync('./.gitignore')) {
       this.missingFiles.push('.gitignore');
