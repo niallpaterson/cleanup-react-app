@@ -14,6 +14,12 @@ const checkExistenceOf = {
     }
     return this;
   },
+  theAppJs() {
+    if (!fs.existsSync('./src/App.js')) {
+      this.missingFiles.push('src/App.js');
+    }
+    return this;
+  },
   theGitignore() {
     if (!fs.existsSync('./.gitignore')) {
       this.missingFiles.push('.gitignore');
