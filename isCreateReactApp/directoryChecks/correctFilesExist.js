@@ -2,6 +2,12 @@ import fs from 'fs';
 
 const checkExistenceOf = {
   missingFiles: [],
+  thePublicDirectory() {
+    if (!fs.existsSync('./public')) {
+      this.missingFiles.push('public');
+    }
+    return this;
+  },
   theSrcDirectory() {
     if (!fs.existsSync('./src')) {
       this.missingFiles.push('src');
