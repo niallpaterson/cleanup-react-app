@@ -1,3 +1,5 @@
+const fs = require('fs');
+
 const checkContentOf = {
   filesToCheck: [
     "src/App.js",
