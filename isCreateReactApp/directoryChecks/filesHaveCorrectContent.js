@@ -20,6 +20,7 @@ const checkContentOf = {
           if (err) throw err;
           if (fileContent !== templateContent) {
             this.checksFailed = true;
+            this.filesWithIncorrectContent.push(file);
           }
         });
       });
