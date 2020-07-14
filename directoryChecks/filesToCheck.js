@@ -1,0 +1,35 @@
+const filesToCheck = {
+  forExistence: [
+    'node_modules',
+    'public',
+    'public/favicon.ico',
+    'public/index.html',
+    'public/logo192.png',
+    'public/logo512.png',
+    'public/manifest.json',
+    'public/robots.txt',
+    'src',
+    'src/App.js',
+    'src/App.test.js',
+    'src/index.css',
+    'src/index.js',
+    'src/logo.svg',
+    'src/serviceWorker.js',
+    'src/setupTests.js',
+    '.gitignore',
+    'package.json',
+    'README.md',
+    'yarn.lock',
+  ],
+  contentOf: [
+    'src/App.js',
+    'src/App.css',
+    'src/index.js',
+    'src/index.html',
+    'public/manifest.json',
+    'README.md',
+    'serviceWorker.js',
+  ],
+};
+
+export default filesToCheck;
