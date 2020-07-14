@@ -2,13 +2,13 @@ const fs = require('fs');
 
 const checkContentOf = {
   filesToCheck: [
-    "src/App.js",
-    "src/App.css",
-    "src/index.js",
-    "src/index.html",
-    "public/manifest.json",
-    "README.md",
-    "serviceWorker.js",
+    'src/App.js',
+    'src/App.css',
+    'src/index.js',
+    'src/index.html',
+    'public/manifest.json',
+    'README.md',
+    'serviceWorker.js',
   ],
   filesWithIncorrectContent: [],
   checksFailed: false,
