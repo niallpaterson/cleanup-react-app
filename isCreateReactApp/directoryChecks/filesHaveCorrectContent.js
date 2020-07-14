@@ -14,9 +14,9 @@ const checkContentOf = {
   checksFailed: false,
   files() {
     this.filesToCheck.forEach((file) => {
-      fs.readFile(`${process.cwd()}/${file}`, (err, fileContent) => {
+      fs.readFile(`./${file}`, (err, fileContent) => {
         if (err) throw err;
-        fs.readFile(`./templates/template.${file}`, (err, templateContent) => {
+        fs.readFile(`${__dirname}/templates/template.${file}`, (err, templateContent) => {
           if (err) throw err;
           if (fileContent !== templateContent) {
             this.checksFailed = true;
