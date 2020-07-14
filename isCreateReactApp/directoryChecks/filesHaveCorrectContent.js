@@ -8,7 +8,7 @@ const checkContentOf = {
     'README.md', 
     'serviceWorker.js' 
   ],
-  filesWithIncorrectContent = [],
+  filesWithIncorrectContent: [],
   checksFailed: false,
   files() {
     this.filesToCheck.forEach((file) => {
