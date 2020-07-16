@@ -1,4 +1,6 @@
 import * as fs from 'fs';
+import path from 'path';
+const __dirname = path.resolve();
 
 const modified = (files) => files.toCheckcontentOf.filter(
   (file) => fs.readFile(`${process.cwd()}/${file}`,
