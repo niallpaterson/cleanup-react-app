@@ -6,13 +6,28 @@ const files = {
     'src/logo.svg',
   ],
   toModify: [
-    'src/app.css',
-    'src/app.js',
-    'src/index.css',
-    'README.md',
+    {
+      path: 'src/App.css',
+      newContent: '__dirname/templates/replacements/App.css',
+    },
+    {
+      path: 'src/App.js',
+      newContent: '__dirname/templates/replacements/App.js',
+    },
+    {
+      path: 'src/index.css',
+      newContent: '__dirname/templates/replacements/index.css',
+    },
+    {
+      path: 'src/README.md',
+      newContent: '__dirname/templates/replacements/README.md',
+    },
   ],
   toRename: [
-    'app.js',
+    {
+      oldPath: 'app.js',
+      newPath: 'app.jsx',
+    },
   ],
   toCheckforExistence: [
     'node_modules',
