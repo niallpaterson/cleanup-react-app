@@ -1,5 +1,20 @@
-const filesToCheck = {
-  forExistence: [
+const files = {
+  toRemove: [
+    'public/favicon.io',
+    'public/logo192.png',
+    'public/logo512.png',
+    'src/logo.svg',
+  ],
+  toModify: [
+    'src/app.css',
+    'src/app.js',
+    'src/index.css',
+    'README.md',
+  ],
+  toRename: [
+    'app.js',
+  ],
+  toCheckforExistence: [
     'node_modules',
     'public',
     'public/favicon.ico',
@@ -21,7 +36,7 @@ const filesToCheck = {
     'README.md',
     'yarn.lock',
   ],
-  contentOf: [
+  toCheckcontentOf: [
     'src/App.js',
     'src/App.css',
     'src/index.js',
@@ -32,4 +47,4 @@ const filesToCheck = {
   ],
 };
 
-export default filesToCheck;
+export default files;
