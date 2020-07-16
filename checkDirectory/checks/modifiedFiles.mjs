@@ -1,3 +1,5 @@
+import * as fs from 'fs';
+
 const modified = (files) => files.toCheckcontentOf.filter(
   (file) => fs.readFile(`${process.cwd()}/${file}`,
     (err, fileContent) => fs.readFile(`${__dirname}/templates/${file}`,
