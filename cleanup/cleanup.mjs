@@ -1,4 +1,6 @@
-import { remove, rename, rewrite } from './utilities';
+import remove from './utilities/removeFile.mjs'
+import rename from './utilities/renameFile.mjs'
+import rewrite from './utilities/rewriteFile.mjs'
 
 const cleanUp = (files) => {
   files.toRemove.forEach((file) => remove(file));

@@ -1,6 +1,6 @@
 import readline from 'readline';
-import { cleanup } from '../cleanup';
-import files from '../files';
+import cleanup from '../cleanup/cleanup.mjs';
+import files from '../files/files.mjs';
 
 const askToProceed = () => {
   const rl = readline.createInterface({

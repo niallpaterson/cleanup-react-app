@@ -1,10 +1,11 @@
-#!usr/bin/env node
+#!/usr/bin/env node
 
 import 'fs';
-import checkDirectory from './checkDirectory';
-import cleanup from './cleanup';
-import files from './files';
-import { warnUser, askToProceed } from './prompts';
+import checkDirectory from './checkDirectory/checkDirectory.mjs';
+import cleanup from './cleanUp/cleanup.mjs';
+import files from './files/files.mjs';
+import warnUser from './prompts/warnUser.mjs'
+import askToProceed from './prompts/askToProceed.mjs';
 
 const { missingFiles, modifiedFiles } = checkDirectory();
 
