@@ -7,7 +7,7 @@ import files from './files/files.mjs';
 import warnUser from './prompts/warnUser.mjs'
 import askToProceed from './prompts/askToProceed.mjs';
 
-const { missingFiles, modifiedFiles } = checkDirectory();
+const { missingFiles, modifiedFiles } = checkDirectory(files);
 
 if (missingFiles.length || modifiedFiles.length) {
   warnUser(missingFiles, modifiedFiles);
