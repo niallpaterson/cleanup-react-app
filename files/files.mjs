@@ -1,6 +1,6 @@
 const files = {
   toRemove: [
-    'public/favicon.io',
+    'public/favicon.ico',
     'public/logo192.png',
     'public/logo512.png',
     'src/logo.svg',
@@ -11,7 +11,7 @@ const files = {
       newContent: '__dirname/templates/replacements/App.css',
     },
     {
-      path: 'src/App.js',
+      path: 'src/App.jsx',
       newContent: '__dirname/templates/replacements/App.js',
     },
     {
@@ -19,14 +19,14 @@ const files = {
       newContent: '__dirname/templates/replacements/index.css',
     },
     {
-      path: 'src/README.md',
+      path: 'README.md',
       newContent: '__dirname/templates/replacements/README.md',
     },
   ],
   toRename: [
     {
-      oldPath: 'app.js',
-      newPath: 'app.jsx',
+      oldPath: 'src/App.js',
+      newPath: 'src/App.jsx',
     },
   ],
   toCheckforExistence: [
