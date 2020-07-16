@@ -1,4 +1,4 @@
-const modified = (files) => files.filter(
+const modified = (files) => files.toCheckcontentOf.filter(
   (file) => fs.readFile(`${process.cwd()}/${file}`,
     (err, fileContent) => fs.readFile(`${__dirname}/templates/${file}`,
       (err, templateContent) => fileContent !== templateContent,
