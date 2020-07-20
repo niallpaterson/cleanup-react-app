@@ -62,7 +62,7 @@ const files = {
     'src/App.js',
     'src/App.css',
     'src/index.js',
-    'src/index.html',
+    'public/index.html',
     'public/manifest.json',
     'README.md',
     'serviceWorker.js',
