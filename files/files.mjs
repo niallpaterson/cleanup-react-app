@@ -1,3 +1,10 @@
+import {
+  AppJsx,
+  AppCss,
+  README,
+  indexCss,
+} from '../templates/replacements/index.mjs';
+
 const files = {
   toRemove: [
     'public/favicon.ico',
@@ -8,19 +15,19 @@ const files = {
   toModify: [
     {
       path: 'src/App.css',
-      newContent: '__dirname/templates/replacements/App.css',
+      newContent: AppCss,
     },
     {
       path: 'src/App.jsx',
-      newContent: '__dirname/templates/replacements/App.js',
+      newContent: AppJsx,
     },
     {
       path: 'src/index.css',
-      newContent: '__dirname/templates/replacements/index.css',
+      newContent: indexCss,
     },
     {
       path: 'README.md',
-      newContent: '__dirname/templates/replacements/README.md',
+      newContent: README,
     },
   ],
   toRename: [
