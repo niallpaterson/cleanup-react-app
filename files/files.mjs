@@ -62,7 +62,7 @@ const files = {
     'README.md',
     'yarn.lock',
   ],
-  toCheckcontentOf: [
+  toCheckContentOf: [
     'src/App.js',
     'src/App.css',
     'src/index.js',
