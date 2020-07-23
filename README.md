@@ -123,7 +123,7 @@ These files are emptied of content:
 > src/index.css  
 > README.md  
 
-These file has most of its boilerplate removed:
+This file has most of its boilerplate removed:
 
 > src/App.jsx
 
