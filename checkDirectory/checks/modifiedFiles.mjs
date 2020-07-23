@@ -1,13 +1,12 @@
 import * as fs from 'fs';
-import path from 'path';
-const __dirname = path.resolve();
 
-const modified = (files) => files.toCheckcontentOf.filter(
-  (file) => fs.readFile(`${process.cwd()}/${file}`,
-    (err, fileContent) => fs.readFile(`${__dirname}/templates/${file}`,
-      (err, templateContent) => fileContent !== templateContent,
-    ),
-  ),
-);
+const modified = (files, root) => files.toCheckContentOf.filter((file) => {
+  if (!fs.existsSync(`./${file}`)) {
+    return false;
+  }
+  const fileContent = fs.readFileSync(`${process.cwd()}/${file}`, 'utf8');
+  const templateContent = fs.readFileSync(`${root}/templates/${file}`, 'utf8');
+  return fileContent !== templateContent;
+});
 
 export default modified;
