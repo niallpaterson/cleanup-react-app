@@ -13,9 +13,7 @@ if (missingFiles.length || modifiedFiles.length) {
   warnUser(missingFiles, modifiedFiles);
   askToProceed();
 } else {
-  console.log('🧼 Cleaning app');
   cleanup(files);
-  console.log(`✨ Cleaned up ${process.cwd()}`);
 }
 
 process.exitCode = 1;
