@@ -8,7 +8,7 @@ const askToProceed = () => {
     output: process.stdout,
   });
 
-  rl.question('Do you want to clean this directory?\n', (answer) => {
+  rl.question('Do you want to cleanup this directory? (N/y)\n', (answer) => {
     rl.close();
     return answer.toLowerCase() !== 'y' ? process.exit() : cleanup(files);
   });
