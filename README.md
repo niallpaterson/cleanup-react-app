@@ -39,7 +39,7 @@ cleanup-react-app
 
 The package performs four operations.
 
-## 1. Directory checks
+### 1. Directory checks
 
 First the contents of the directory to be cleaned are checked. This is to ensure the directory is an instance of create-react-app.
 
@@ -96,7 +96,7 @@ and the content of:
 >README.md  
 >serviceWorker.js  
 
-## 2. Remove files
+### 2. Remove files
 
 These files are removed:
 
@@ -105,7 +105,7 @@ These files are removed:
 > public/logo512.png  
 > src/logo.svg  
 
-## 3. Rename files
+### 3. Rename files
 
 This file is renamed:
 
@@ -115,7 +115,7 @@ to
 
 > App.jsx
 
-## 4. Rewrite files
+### 4. Rewrite files
 
 These files are emptied of content:
 
