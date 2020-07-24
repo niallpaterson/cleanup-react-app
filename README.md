@@ -90,6 +90,7 @@ and the content of:
 >src/App.js  
 >src/App.css  
 >src/index.js  
+>src/index.css  
 >public/index.html  
 >public/manifest.json  
 >README.md  
