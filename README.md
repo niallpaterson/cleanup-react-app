@@ -4,7 +4,7 @@ Cleanup your create-react-app. Removes commonly deleted files and boilerplate co
 
 ## Instructions
 
-It is reccomended that you install the package globally:
+Global installation is reccomended:
 
 ````shell
 npm i -g cleanup-react-app
@@ -41,7 +41,7 @@ The package performs four operations.
 
 ### 1. Directory checks
 
-First the contents of the directory to be cleaned are checked. This is to ensure the directory is an instance of create-react-app.
+To ensure the directory being cleaned is an instance of create-react-app, its contents are checked.
 
 If missing or modified files are detected, a warning is thrown:
 
@@ -59,9 +59,7 @@ Modified files:
 Attempting to cleanup: /directory/being/cleaned
 ````
 
-The user is then asked whether to proceed with the cleanup.
-
-If this warning is thrown, pay attention to the printed directory. Attempting to clean a directory that is not a template instance of create-react-app may result in unintended files being overwritten/deleted.
+Pay attention to the printed directory if this warning is thrown. Attempting to clean a directory that is not a template instance of create-react-app may result in unintended files being overwritten or deleted.
 
 The package checks the existence of:
 
@@ -98,7 +96,7 @@ and the content of:
 
 ### 2. Remove files
 
-These files are removed:
+It removes:
 
 > public/favicon.ico  
 > public/logo192.png  
@@ -107,7 +105,7 @@ These files are removed:
 
 ### 3. Rename files
 
-This file is renamed:
+It renames:
 
 > App.js
 
@@ -117,13 +115,13 @@ to
 
 ### 4. Rewrite files
 
-These files are emptied of content:
+It empties the content of:
 
 > src/App.css  
 > src/index.css  
 > README.md
 
-This file has most of its boilerplate removed:
+It removes most of the boilerplate from:
 
 > src/App.jsx
 
