@@ -12,18 +12,19 @@ const files = {
     },
     {
       path: 'src/App.jsx',
-      newContent: `import React from 'react';
-      import './App.css';
-      
-      function App() {
-        return (
-          <>
-          </>
-        );
-      }
-      
-      export default App;
-      `,
+      newContent:
+`import React from 'react';
+import './App.css';
+
+function App() {
+  return (
+    <>
+    </>
+  );
+}
+
+export default App;
+`,
     },
     {
       path: 'src/index.css',
@@ -65,6 +66,7 @@ const files = {
   toCheckContentOf: [
     'src/App.js',
     'src/App.css',
+    'src/index.css',
     'src/index.js',
     'public/index.html',
     'public/manifest.json',
