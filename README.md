@@ -41,7 +41,7 @@ cleanup-react-app
 
 The package performs four operations.
 
-### 1. Directory checks
+### 1. Check Directory
 
 To ensure the directory being cleaned is an instance of create-react-app, its contents are checked.
 
