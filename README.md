@@ -29,7 +29,6 @@ cleanup-react-app
 It is intended that the package is run directly after running create-react-app.
 
 ````shell
-
 create-react-app app-name
 
 cd app-name
