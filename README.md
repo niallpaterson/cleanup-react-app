@@ -84,7 +84,7 @@ The package checks the existence of:
 >.gitignore  
 >package.json  
 >README.md  
->yarn.lock  
+>yarn.lock
 
 and the content of:
 
@@ -94,7 +94,7 @@ and the content of:
 >public/index.html  
 >public/manifest.json  
 >README.md  
->serviceWorker.js  
+>serviceWorker.js
 
 ### 2. Remove files
 
@@ -103,7 +103,7 @@ These files are removed:
 > public/favicon.ico  
 > public/logo192.png  
 > public/logo512.png  
-> src/logo.svg  
+> src/logo.svg
 
 ### 3. Rename files
 
@@ -121,7 +121,7 @@ These files are emptied of content:
 
 > src/App.css  
 > src/index.css  
-> README.md  
+> README.md
 
 This file has most of its boilerplate removed:
 
