@@ -7,7 +7,7 @@ Cleanup your create-react-app. Removes commonly deleted files and boilerplate co
 It is reccomended that you install the package globally:
 
 ````shell
-npm install global cleanup-react-app
+npm i -g cleanup-react-app
 ````
 
 or
