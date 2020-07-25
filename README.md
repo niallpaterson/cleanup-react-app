@@ -6,7 +6,7 @@ Similar packages exist. The contribution of this package is that it is simple, c
 
 ## Instructions
 
-Global installation is reccomended:
+Global installation is recommended:
 
 ````shell
 npm i -g cleanup-react-app
