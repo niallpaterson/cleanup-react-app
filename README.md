@@ -123,22 +123,77 @@ It empties the content of:
 > src/index.css  
 > README.md
 
-It removes most of the boilerplate from:
+It modifies the content of:
 
-> src/App.jsx
+> src/App.jsx  
+> src/App.test.js  
+> public/manifest.json
+
+The contents of these files are modified as follows.
+
+Most of the boilerplate content is removed from src/App.jsx. A novel starting message is also given.
 
 The new content is:
 
 ````jsx
 import React from 'react';
 import './App.css';
-  
-  function App() {
-    return (
-      <>
-      </>
-    );
-  }
+
+function App() {
+  return (
+    <p>
+      Cleanedup React App
+    </p>
+  );
+}
 
 export default App;
+````
+
+The test included in src/App.test.js fails because the content of src/App.jsx is modified. A new test is written. The new test checks that the newly given message is present. If `yarn test` is run on a freshly cleanedup app, the new test should pass.
+
+The new content is:
+
+````jsx
+import React from 'react';
+import { render } from '@testing-library/react';
+import App from './App';
+
+test('renders cleanup react app message', () => {
+  const { getByText } = render(<App />);
+  const cleanupMessage = getByText(/Cleanedup React App/i);
+  expect(cleanupMessage).toBeInTheDocument();
+});
+````
+
+The icons paths in public/manifest.json do not exist after cleanup because the icons have been removed. To avoid console errors the src values of the icon objects are set to empty strings.
+
+The new content is:
+
+````json
+{
+"short_name": "React App",
+"name": "Create React App Sample",
+"icons": [
+  {
+    "src": "",
+    "sizes": "64x64 32x32 24x24 16x16",
+    "type": "image/x-icon"
+  },
+  {
+    "src": "",
+    "type": "image/png",
+    "sizes": "192x192"
+  },
+  {
+    "src": "",
+    "type": "image/png",
+    "sizes": "512x512"
+  }
+],
+"start_url": ".",
+"display": "standalone",
+"theme_color": "#000000",
+"background_color": "#ffffff"
+}
 ````
