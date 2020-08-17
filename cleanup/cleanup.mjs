@@ -1,6 +1,6 @@
-import remove from './utilities/removeFile.mjs'
-import rename from './utilities/renameFile.mjs'
-import rewrite from './utilities/rewriteFile.mjs'
+import remove from './utilities/removeFile.mjs';
+import rename from './utilities/renameFile.mjs';
+import rewrite from './utilities/rewriteFile.mjs';
 
 const cleanUp = async (files) => {
   console.log(`🧼 Cleaning app`);
