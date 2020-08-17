@@ -18,8 +18,9 @@ import './App.css';
 
 function App() {
   return (
-    <>
-    </>
+    <p>
+      Cleanedup React App
+    </p>
   );
 }
 
@@ -62,6 +63,20 @@ export default App;
 "theme_color": "#000000",
 "background_color": "#ffffff"
 }
+`,
+    },
+    {
+      path: 'src/App.test.js',
+      newContent:
+`import React from 'react';
+import { render } from '@testing-library/react';
+import App from './App';
+
+test('renders learn react link', () => {
+  const { getByText } = render(<App />);
+  const cleanupMessage = getByText(/Cleanedup React App/i);
+  expect(cleanupMessage).toBeInTheDocument();
+});
 `,
     },
   ],
