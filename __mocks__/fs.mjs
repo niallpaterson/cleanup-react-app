@@ -12,7 +12,10 @@ const unlink = (path) => directory.set(filter(
   directory.files, (key) => key !== path,
 ));
 
+const existsSync = (path) => Object.prototype.hasOwnProperty.call(directory.get(), path);
+
 fs.rename = rename;
+fs.existsSync = existsSync;
 fs.unlink = unlink;
 
 export default fs;
