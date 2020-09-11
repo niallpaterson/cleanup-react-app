@@ -14,8 +14,19 @@ const unlink = (path) => directory.set(filter(
 
 const existsSync = (path) => Object.prototype.hasOwnProperty.call(directory.get(), path);
 
+const writeFile = (path, data) => {
+  if (Object.prototype.hasOwnProperty.call(directory.get(), path)) {
+    directory.set(
+      map(directory.get(), (file, content) => (file === path ? [file, data] : [file, content])),
+    );
+  } else {
+    directory.set({ ...directory.get(), [path]: data });
+  }
+};
+
 fs.rename = rename;
 fs.existsSync = existsSync;
 fs.unlink = unlink;
+fs.writeFile = writeFile;
 
 export default fs;
