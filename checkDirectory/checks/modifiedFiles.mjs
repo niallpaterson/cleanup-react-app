@@ -1,4 +1,4 @@
-import * as fs from 'fs';
+import fs from 'fs';
 
 const modified = (files, root) => files.toCheckContentOf.filter((file) => {
   if (!fs.existsSync(`./${file}`)) {

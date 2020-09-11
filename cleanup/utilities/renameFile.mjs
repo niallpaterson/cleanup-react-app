@@ -1,6 +1,6 @@
-import * as fs from 'fs';
+import fs from 'fs';
 
-const rename = (file, to) => fs.rename(`./${file}`, `./${to}`, (err) => { 
+const rename = (file, to) => fs.rename(`./${file}`, `./${to}`, (err) => {
   if (err) console.warn(`Warning: cannot rename missing resource '${file}'`);
 });
 

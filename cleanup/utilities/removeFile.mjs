@@ -1,4 +1,4 @@
-import * as fs from 'fs';
+import fs from 'fs';
 
 const remove = (file) => fs.unlink(`./${file}`, (err) => {
   if (err) console.warn(`Warning: cannot unlink missing resource '${file}'`);

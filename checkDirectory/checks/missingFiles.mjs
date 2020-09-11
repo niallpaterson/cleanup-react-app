@@ -1,4 +1,4 @@
-import * as fs from 'fs';
+import fs from 'fs';
 
 const missing = (files) => files.toCheckforExistence.filter((file) => !fs.existsSync(`./${file}`));
 
