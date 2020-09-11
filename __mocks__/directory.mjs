@@ -9,6 +9,27 @@ const directory = {
   setCorrectFiles() {
     this.files = { ...this.correctFiles };
   },
+  setPartiallyCorrectFiles() {
+    this.files = { ...this.correctFiles };
+    delete this.files['./src/App.js'];
+    delete this.files['./public/index.html'];
+  },
+  setIncorrectContent() {
+    this.setCorrectFiles();
+    this.files['./src/App.js'] = 'incorrect content';
+    this.files['./src/App.css'] = 'incorrect content';
+    this.files['./src/index.css'] = 'incorrect content';
+    this.files['./src/index.js'] = 'incorrect content';
+    this.files['./public/index.html'] = 'incorrect content';
+    this.files['./public/manifest.json'] = 'incorrect content';
+    this.files['./README.md'] = 'incorrect content';
+    this.files['./serviceWorker.js'] = 'incorrect content';
+  },
+  setPartialIncorrectContent() {
+    this.setCorrectFiles();
+    this.files['./src/App.js'] = 'incorrect content';
+    this.files['./src/App.css'] = 'incorrect content';
+  },
   correctFiles: {
     './node_modules': 'dir',
     './public': 'dir',
