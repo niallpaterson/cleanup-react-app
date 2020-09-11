@@ -3,21 +3,10 @@
 import 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import checkDirectory from './checkDirectory/checkDirectory.mjs';
-import cleanup from './cleanUp/cleanup.mjs';
-import files from './files/files.mjs';
-import warnUser from './prompts/warnUser.mjs'
-import askToProceed from './prompts/askToProceed.mjs';
+import cleanupReactApp from './cleanupReactApp/cleanupReactApp.mjs';
 
 const scriptRoot = path.dirname(fileURLToPath(import.meta.url));
 
-const { missingFiles, modifiedFiles } = checkDirectory(files, scriptRoot);
-
-if (missingFiles.length || modifiedFiles.length) {
-  warnUser(missingFiles, modifiedFiles);
-  askToProceed();
-} else {
-  cleanup(files);
-}
+cleanupReactApp(scriptRoot);
 
 process.exitCode = 1;
