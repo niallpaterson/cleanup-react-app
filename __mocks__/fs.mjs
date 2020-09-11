@@ -24,9 +24,17 @@ const writeFile = (path, data) => {
   }
 };
 
+const readFileSync = (path) => {
+  if (path.includes('/templates')) {
+    return directory.files[path.replace('root/', '').replace('templates/', './')];
+  }
+  return directory.correctFiles[path.replace(`${process.cwd()}/`, './')];
+};
+
 fs.rename = rename;
 fs.existsSync = existsSync;
 fs.unlink = unlink;
 fs.writeFile = writeFile;
+fs.readFileSync = readFileSync;
 
 export default fs;
